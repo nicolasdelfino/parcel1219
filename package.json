@@ -1,0 +1,23 @@
+{
+  "name": "parcelhmr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:foo":
+      "parcel watch foo/index.js --hmr-hostname foo.org -d wwwroot/dist/foo",
+    "dev:bar":
+      "parcel watch bar/index.js --hmr-hostname foo.org -d wwwroot/dist/bar",
+    "build": "npm run build:foo && npm run build:bar",
+    "build:foo": "parcel build foo/index.js -d wwwroot/dist/foo",
+    "build:bar": "parcel build bar/index.js -d wwwroot/dist/bar",
+    "clean": "rimraf wwwroot/dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.7.1",
+    "rimraf": "^2.6.2"
+  }
+}
